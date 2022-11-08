@@ -11,8 +11,16 @@
     width: 100%;
 }
 
+
 #login{
     background-color: rgba(22,2,71,1);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .input{
