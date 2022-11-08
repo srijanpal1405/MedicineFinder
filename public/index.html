@@ -1,56 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp Form - MongoDB</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Search</title>
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-
-            </div>
-            <div class="col-md-6 main">
-                <form action="/sign_up" method="POST">
-                    <h2>Medicine Entry Form</h2>
-                    <input type="text" class="box" id="med_ID" name="med_ID" placeholder="Med_ID" required />
-                    <br>
-                    <input type="text" class="box" id="med_Name" name="med_Name" placeholder="Medicine Name" required />
-                    <br>
-                    <input type="text" class="box" id="gen_Name" name="gen_Name" placeholder="Generic Name" required />
-                    <br>
-                    <input type="text" class="box" id="shop_ID" name="shop_ID" placeholder="Shop_ID" required />
-                    <br>
-                    <input type="text" class="box" id="shop_name" name="shop_name" placeholder="Shop Name" required />
-                    <br>
-                    <input type="text" class="box" id="address" name="address" placeholder="address" required />
-                    <br>
-                    <input type="text" class="box" id="contact" name="contact" placeholder="contact" required />
-                    <br>
-                    <input type="text" class="box" id="pin" name="pin" placeholder="PIN code" required />
-                    <br>
-                    <input type="number" class="box" id="stock" name="stock" placeholder="stock" required />
-                    <br>
-                    <input type="text" class="box" id="exp" name="exp" placeholder="Expiry Date" required />
-                    <br>
-                    <input type="number" class="box" id="price" name="price" placeholder="Price" required />
-                    <br>
-                    <input type="submit" value="Submit" id="submit" />
-                </form>
-            </div>
-            <div class="col-md-3">
-            </div>
-        </div>
+    <div>
+        <form action="/search" method="POST">
+            <input type="text" id ="search" name="search" placeholder="Search Medicines"></input>
+            <input type="text" id ="pin" name="pin" placeholder="Enter Area PIN Code"></input>
+            <input type="submit" value="submit"></input>
+        </form>
     </div>
-
 </body>
-
 </html>

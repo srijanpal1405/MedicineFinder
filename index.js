@@ -1,7 +1,10 @@
 var express = require("express")
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
-
+const {MongoClient} = require('mongodb')
+const url= 'mongodb+srv://Medfinder:Medfinder@cluster0.gwb0e7y.mongodb.net/Medfinder_medicine';
+const databaseName='Medfinder_medicine'
+const client= new MongoClient(url);
 const app = express()
 
 app.use(bodyParser.json())
@@ -21,13 +24,7 @@ db.on('error',()=>console.log("Error in Connecting to Database"));
 db.once('open',()=>console.log("Connected to Database"))
 
 
-app.get('/medicine',(req,res)=>{
-    let medicines=[]
-    db.collection('medicine_lists')
-    .find()
-    .forEach(medicine => medicines.push(medicine))
 
-})
 
 
 
@@ -76,8 +73,9 @@ app.get("/",(req,res)=>{
     res.set({
         "Allow-access-Allow-Origin": '*'
     })
-    return res.redirect('index.html');
+    return res.redirect('search.html');
 }).listen(3000);
+
 
 
 console.log("Listening on PORT 3000");
