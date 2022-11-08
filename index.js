@@ -69,13 +69,15 @@ app.post("/sign_up",(req,res)=>{
 })
 
 
-app.get("/index_4.html",(req,res)=>{
+app.get("/Med_Entry.html",(req,res)=>{
     res.set({
         "Allow-access-Allow-Origin": '*'
     })
     return res.redirect('index_4.html');
 }).listen(3000);
 
-
+app.get("/index.html",(req,res)=>{
+    return res.redirect('index.html')
+})
 
 console.log("Listening on PORT 3000");
