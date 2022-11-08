@@ -1,34 +1,96 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title> Signup Form</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<title>Search Results</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js">
+	</script>
+
+	<style>
+		table {
+			margin: 0 auto;
+			font-size: large;
+			border: 1px solid black;
+		}
+
+		h1 {
+			text-align: center;
+			color: #006600;
+			font-size: xx-large;
+			font-family: 'Gill Sans',
+				'Gill Sans MT', ' Calibri',
+				'Trebuchet MS', 'sans-serif';
+		}
+
+		td {
+			background-color: #E4F5D4;
+			border: 1px solid black;
+		}
+
+		th,
+		td {
+			font-weight: bold;
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+
+		td {
+			font-weight: lighter;
+		}
+	</style>
 </head>
 
 <body>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-            </div>
+	<section>
+		<h1>MedFinder</h1>
 
-            <div class="col-md-6 main">
+		<!-- TABLE CONSTRUCTION-->
+		<table id='table'>
+			<!-- HEADING FORMATION -->
+			<tr>
+				<th>Med Name</th>
+				<th>Gen Name</th>
+				<th>Shop Name</th>
+				<th>Shop ID</th>
+			</tr>
 
-                <h1> Signup Successful</h1>
+			<script>
+				$(document).ready(function () {
 
-            </div>
+					// FETCHING DATA FROM JSON FILE
+					$.getJSON("test.json",
+							function (data) {
+						var student = '';
 
+						// ITERATING THROUGH OBJECTS
+						$.each(data, function (key, value) {
 
-            <div class="col-md-3">
-            </div>
+							//CONSTRUCTION OF ROWS HAVING
+							// DATA FROM JSON OBJECT
+							student += '<tr>';
+							student += '<td>' +
+								value.med_Name + '</td>';
 
-        </div>
-    </div>
+							student += '<td>' +
+								value.gen_Name + '</td>';
+
+							student += '<td>' +
+								value.shop_ID + '</td>';
+
+							student += '<td>' +
+								value.shop_name + '</td>';
+
+							student += '</tr>';
+						});
+						
+						//INSERTING ROWS INTO TABLE
+						$('#table').append(student);
+					});
+				});
+			</script>
+	</section>
 </body>
 
 </html>

@@ -35,17 +35,24 @@ app.post("/search",(req,res)=>{
         "pin":pin
     }
     async function getData()
-{
+    {
     let result = await client.connect();
     db= result.db(databaseName);
     collection = db.collection('medicine_lists');
     let data = await collection.find({"med_Name":name,"pin":pin}).toArray();
-    console.log(data)
+    // console.log(data)
+    var fs = require('fs');
+    fs.writeFile("public/test.json", JSON.stringify(data), function(err) {
+    if (err) {
+        console.log(err);
+    }
+    });
 
-}
-getData();
+    }
+    getData();
 
     console.log(data);
+    
     return res.redirect("signup_success.html")
 })
 
@@ -58,6 +65,26 @@ app.get("/",(req,res)=>{
     return res.redirect('index.html');
 }).listen(3000);
 
-
+function show(data) {
+    let tab = 
+        `<tr>
+          <th>Name</th>
+          <th>Office</th>
+          <th>Position</th>
+          <th>Salary</th>
+         </tr>`;
+    
+    // Loop to access all rows 
+    for (let r of data.list) {
+        tab += `<tr> 
+    <td>${r.med_ID} </td>
+    <td>${r.med_Name}</td>
+    <td>${r.gen_Name}</td> 
+    <td>${r.shop_name}</td>          
+</tr>`;
+    }
+    // Setting innerHTML as tab variable
+    document.getElementById("medicines").innerHTML = tab;
+}
 
 console.log("Listening on PORT 3000");
