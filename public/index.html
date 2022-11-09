@@ -7,20 +7,31 @@
     <title>Search</title>
 </head>
 <body>
-    <div>
-        <form action="/search" method="POST">
-            <input type="text" id ="search" name="search" placeholder="Search Medicines"></input>
-            <input type="text" id ="pin" name="pin" placeholder="Enter Area PIN Code"></input>
-            <input type="submit" value="submit"></input>
-        </form>
-
-        <form action="/Med_Entry.html" method="GET">
-            <input type="Submit" value="Medicine Entry"></input>
-        </form>
-        <a href="/vendor.html">login</a>
+    <div class="container">
+        <div class="logo">
+            <img src="MedFinder.png" alt="Med">
+        </div>
+        <div>
+            <form action="/search" method="POST">
+                <input type="text" id ="search" name="search" placeholder="Search Medicines"></input>
+                <input type="text" id ="pin" name="pin" placeholder="Enter Area PIN Code"></input>
+                <input type="submit" value="submit"></input>
+            </form>
+    
+            <form action="/Med_Entry.html" method="GET">
+                <input type="Submit" value="Medicine Entry"></input>
+            </form>
+            <a href="/vendor.html"><button>login</button></a>
+        </div>
     </div>
+    
 
 <style>
+
+input{
+    font-family: 'Roboto', sans-serif;
+}
+
     body {
     --color-primary : #610095;
     --color-primary-dark : #50009b;
@@ -28,7 +39,7 @@
     --color-error : #cc3333;
     --color-success : #4bb544;
     --border-radius : 4px;
-
+    background-image: url('bg.png')!important;
     margin: 0;
     height: 100vh;
     display: flex;
@@ -37,6 +48,19 @@
     font-size: 18px;
     background: var(--color-primary);
     background-size: cover;
+}
+.container{
+    display: block;
+    flex-wrap: nowrap;
+}
+
+.logo{
+  
+    margin:-100px 30% 50px 30%;
+}
+img{
+    height: 7rem;
+    width: 7rem;
 }
 </style>
 
