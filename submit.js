@@ -135,5 +135,10 @@ app.get("/Med_Entry.html",(req,res)=>{
 app.get("/index.html",(req,res)=>{
     return res.redirect('index.html')
 })
+// app.get("/loginCheck.html",(req,res)=>{
+//     return res.render('loginCheck')
+// })
+
+app.use(express.static('/vendor.html'));
 
 console.log("Listening on PORT 3000");
