@@ -16,9 +16,9 @@
         <img class="brandlogo" src="MedFinder.png" alt="Med">
         <h2 class="brand">MedFinder</h2>
         <form action="/Med_Entry.html" method="GET">
-            <input class="med-entry" type="Submit" value="Medicine Entry"></input>
+            <input class="med-entry btn-hover color-1" type="Submit" value="Medicine Entry"></input>
         </form>
-        <a href="/vendor.html"><button class="loginbutton">Login</button></a>
+        <a href="/vendor.html"><button class="loginbutton btn-hover color-2">Login</button></a>
     </div>
     <div class="container">
         <img class="imglogo" src="MedFinder.png" alt="Med">
@@ -95,13 +95,13 @@
         }
 
         .nav {
-            background: rgb(207,207,207);
-            background: linear-gradient(90deg, rgba(226,224,224,1) 0%, rgba(255,255,255,1) 100%);
+            background: rgb(207, 207, 207);
+            background: linear-gradient(90deg, rgba(226, 224, 224, 1) 0%, rgba(255, 255, 255, 1) 100%);
             display: flex;
             justify-content: center;
         }
 
-        .med-entry{
+        .med-entry {
             background-color: rgba(38, 2, 56, 1);
             padding: 1rem 2rem;
             border-radius: 1rem;
@@ -110,11 +110,11 @@
             position: absolute;
             right: 85rem;
             font-family: 'Poppins', sans-serif;
-            top: 0.5rem;   
+            top: 0.5rem;
             /* top: 1.25rem; */
         }
 
-        .loginbutton{
+        .loginbutton {
             background-color: rgba(7, 154, 184, 1);
             padding: 1rem 2rem;
             border-radius: 1rem;
@@ -131,25 +131,27 @@
             justify-content: center;
         }
 
-        #search{
+        #search {
             height: 3rem;
             border-radius: 2rem 0 0 2rem;
             width: 20rem;
             text-align: center;
             border: none;
             font-family: 'Poppins', sans-serif;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.75);
         }
 
-        #pin{
+        #pin {
             height: 3rem;
             border-radius: 0 2rem 2rem 0;
             text-align: center;
             border: none;
             font-family: 'Poppins', sans-serif;
             width: 20rem;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.75);
         }
 
-        #submit{
+        #submit {
             background-color: rgba(38, 2, 56, 1);
             border: none;
             color: white;
@@ -160,6 +162,44 @@
             top: 30.3rem;
             font-family: 'Poppins', sans-serif;
             width: 4.2rem;
+        }
+
+        .btn-hover {
+            /* width: 200px; */
+            /* font-size: 16px; */
+            /* font-weight: 600; */
+            color: #fff;
+            cursor: pointer;
+            /* margin: 20px; */
+            /* height: 55px; */
+            text-align: center;
+            border: none;
+            background-size: 300% 100%;
+
+            border-radius: 50px;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .btn-hover:hover {
+            background-position: 100% 0;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .btn-hover:focus {
+            outline: none;
+        }
+
+        .btn-hover.color-1 {
+            background-image: linear-gradient(90deg, rgba(63,13,88,1) 0%, rgba(26,192,178,1) 100%);
+            /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
+        }
+
+        .btn-hover.color-2 {
+            background-image: linear-gradient(90deg, rgba(26,192,178,1) 0%, rgba(63,13,88,1) 100%);
         }
 
     </style>
