@@ -1,68 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>MedFinder</title>
 </head>
+
 <body>
+    <div class="nav">
+        <img class="brandlogo" src="MedFinder.png" alt="Med">
+        <h2 class="brand">MedFinder</h2>
+        <form action="/Med_Entry.html" method="GET">
+            <input class="med-entry" type="Submit" value="Medicine Entry"></input>
+        </form>
+        <a href="/vendor.html"><button class="loginbutton">Login</button></a>
+    </div>
     <div class="container">
-        <div class="logo">
-            <img src="MedFinder.png" alt="Med">
-        </div>
-        <div>
+        <img class="imglogo" src="MedFinder.png" alt="Med">
+        <h2 class="tagline">MedFinder. Locate medicines in seconds.</h2>
+        <div class="search-area">
             <form action="/search" method="POST">
-                <input type="text" id ="search" name="search" placeholder="Search Medicines"></input>
-                <input type="text" id ="pin" name="pin" placeholder="Enter Area PIN Code"></input>
-                <input type="submit" value="Search"></input>
+                <input type="text" id="search" name="search" placeholder="Search Medicines"></input>
+                <input type="text" id="pin" name="pin" placeholder="Enter Area PIN Code"></input>
+                <input type="submit" id="submit" value="Search"></input>
             </form>
-    
-            <form action="/Med_Entry.html" method="GET">
-                <input type="Submit" value="Medicine Entry"></input>
-            </form>
-            <a href="/vendor.html"><button>login</button></a>
         </div>
     </div>
-    
 
-<style>
 
-input{
-    font-family: 'Roboto', sans-serif;
-}
+    <style>
+        body {
+            --color-primary: #610095;
+            --color-primary-dark: #50009b;
+            --color-secondary: #05159d;
+            --color-error: #cc3333;
+            --color-success: #4bb544;
+            --border-radius: 4px;
+            background: var(--color-primary);
+            /* background-image: url('bg.png'); */
+            background-image: url('bg.png'), linear-gradient(180deg, rgba(38, 2, 56, 1) 46%, rgba(7, 154, 184, 1) 100%);
+            margin: 0;
+            height: 100vh;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background-size: cover;
+        }
 
-    body {
-    --color-primary : #610095;
-    --color-primary-dark : #50009b;
-    --color-secondary : #05159d;
-    --color-error : #cc3333;
-    --color-success : #4bb544;
-    --border-radius : 4px;
-    background-image: url('bg.png')!important;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    background: var(--color-primary);
-    background-size: cover;
-}
-.container{
-    display: block;
-    flex-wrap: nowrap;
-}
+        .container {
+            display: block;
+            flex-wrap: nowrap;
+            margin: auto;
+        }
 
-.logo{
-  
+        /* .logo{
     margin:-100px 30% 50px 30%;
-}
-img{
-    height: 7rem;
-    width: 7rem;
-}
-</style>
+} */
+
+        .imglogo {
+            margin-top: 8rem;
+            margin-bottom: 4rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 8rem;
+            width: 8rem;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .tagline {
+            margin-bottom: 3rem;
+        }
+
+        .brandlogo {
+            height: 2rem;
+            padding-top: 1rem;
+            padding: 1rem;
+        }
+
+        .brand {
+            color: blueviolet;
+            font-size: larger;
+        }
+
+        .nav {
+            background: rgb(207,207,207);
+            background: linear-gradient(90deg, rgba(226,224,224,1) 0%, rgba(255,255,255,1) 100%);
+            display: flex;
+            justify-content: center;
+        }
+
+        .med-entry{
+            background-color: rgba(38, 2, 56, 1);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: none;
+            color: white;
+            position: absolute;
+            right: 85rem;
+            font-family: 'Poppins', sans-serif;
+            top: 0.5rem;   
+            /* top: 1.25rem; */
+        }
+
+        .loginbutton{
+            background-color: rgba(7, 154, 184, 1);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            left: 89rem;
+            top: 0.5rem;
+        }
+
+        .search-area {
+            display: flex;
+            justify-content: center;
+        }
+
+        #search{
+            height: 3rem;
+            border-radius: 2rem 0 0 2rem;
+            width: 20rem;
+            text-align: center;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #pin{
+            height: 3rem;
+            border-radius: 0 2rem 2rem 0;
+            text-align: center;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            width: 20rem;
+        }
+
+        #submit{
+            background-color: rgba(38, 2, 56, 1);
+            border: none;
+            color: white;
+            height: 2rem;
+            border-radius: 2rem;
+            position: absolute;
+            right: 28.8rem;
+            top: 30.3rem;
+            font-family: 'Poppins', sans-serif;
+            width: 4.2rem;
+        }
+
+    </style>
 
 </body>
+
 </html>
