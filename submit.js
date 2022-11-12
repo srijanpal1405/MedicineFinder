@@ -103,27 +103,6 @@ app.get("/",(req,res)=>{
     return res.redirect('index.html');
 }).listen(3000);
 
-function show(data) {
-    let tab = 
-        `<tr>
-          <th>Name</th>
-          <th>Office</th>
-          <th>Position</th>
-          <th>Salary</th>
-         </tr>`;
-    
-    // Loop to access all rows 
-    for (let r of data.list) {
-        tab += `<tr> 
-    <td>${r.med_ID} </td>
-    <td>${r.med_Name}</td>
-    <td>${r.gen_Name}</td> 
-    <td>${r.shop_name}</td>          
-</tr>`;
-    }
-    // Setting innerHTML as tab variable
-    document.getElementById("medicines").innerHTML = tab;
-}
 
 app.get("/Med_Entry.html",(req,res)=>{
     res.set({
