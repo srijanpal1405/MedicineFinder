@@ -112,8 +112,11 @@
 		<tr>
 			<th>Med Name</th>
 			<th>Gen Name</th>
-			<th>Shop ID</th>
 			<th>Shop Name</th>
+			<th>Stock</th>
+			<th>Price</th>
+			<th>Address</th>
+			<th>Contact</th>
 		</tr>
 
 		<script>
@@ -137,11 +140,20 @@
 								value.gen_Name + '</td>';
 
 							student += '<td>' +
-								value.shop_ID + '</td>';
-
-							student += '<td>' +
 								value.shop_name + '</td>';
 
+							student += '<td>' +
+								value.stock + '</td>';	
+								
+							student += '<td>' +
+								value.price + '</td>';
+
+							student += '<td>' +
+								value.address + '</td>';
+
+							student += '<td>' +
+								value.contact + '</td>';
+								
 							student += '</tr>';
 						});
 
