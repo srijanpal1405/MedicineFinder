@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
@@ -19,35 +19,35 @@
             <div class="col-md-3">
 
             </div>
-            <div class="col-md-6 main">
+            <div class="col-md-6 main forms">
                 <form action="/index.html" method="GET">
-                    <input type="submit" value="Home">
+                    <input class="btns" type="submit" value="Home">
                 </form>
                 <form action="/sign_up" method="POST">
                     <h2>Medicine Entry Form</h2>
-                    <input type="text" class="box" id="med_ID" name="med_ID" placeholder="Med_ID" required />
+                    <input type="text" class="box" id="med_ID" name="med_ID" placeholder="Medicine ID" required />
                     <br>
                     <input type="text" class="box" id="med_Name" name="med_Name" placeholder="Medicine Name" required />
                     <br>
                     <input type="text" class="box" id="gen_Name" name="gen_Name" placeholder="Generic Name" required />
                     <br>
-                    <input type="text" class="box" id="shop_ID" name="shop_ID" placeholder="Shop_ID" required />
+                    <input type="text" class="box" id="shop_ID" name="shop_ID" placeholder="Shop ID" required />
                     <br>
                     <input type="text" class="box" id="shop_name" name="shop_name" placeholder="Shop Name" required />
                     <br>
-                    <input type="text" class="box" id="address" name="address" placeholder="address" required />
+                    <input type="text" class="box" id="address" name="address" placeholder="Address" required />
                     <br>
-                    <input type="text" class="box" id="contact" name="contact" placeholder="contact" required />
+                    <input type="text" class="box" id="contact" name="contact" placeholder="Contact" required />
                     <br>
-                    <input type="text" class="box" id="pin" name="pin" placeholder="PIN code" required />
+                    <input type="text" class="box" id="pin" name="pin" placeholder="PIN" required />
                     <br>
-                    <input type="number" class="box" id="stock" name="stock" placeholder="stock" required />
+                    <input type="number" class="box" id="stock" name="stock" placeholder="Stock" required />
                     <br>
                     <input type="text" class="box" id="exp" name="exp" placeholder="Expiry Date" required />
                     <br>
                     <input type="number" class="box" id="price" name="price" placeholder="Price" required />
                     <br>
-                    <input type="submit" value="Submit" id="submit" />
+                    <input type="submit" class="btns" value="Submit" id="submit" />
                 </form>
             </div>
             <div class="col-md-3">
@@ -56,5 +56,25 @@
     </div>
 
 </body>
+
+<style>
+    body{
+			background-image: linear-gradient(180deg, rgba(38, 2, 56, 1) 20%, blueviolet 150%);
+	}
+
+    .forms{
+            background-color: white;
+            border-radius: 10px;
+    }
+
+    .btns{
+            background-color: rgba(7, 154, 184, 1);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+    }
+</style>
 
 </html>
